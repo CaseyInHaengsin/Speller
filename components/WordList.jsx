@@ -15,7 +15,13 @@ export default function WordList ({ list }) {
             marginLeft={2}
             marginRight={2}
           >
-            <Badge flexBasis={'30%'} p={2} m={2} colorScheme='coolGray'>
+            <Badge
+              rounded='md'
+              flexBasis={'30%'}
+              p={2}
+              m={2}
+              colorScheme='coolGray'
+            >
               {item}
             </Badge>
             <Flex
