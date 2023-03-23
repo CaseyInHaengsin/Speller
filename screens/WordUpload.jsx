@@ -14,6 +14,7 @@ import {
 } from 'native-base'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import axios from 'axios'
+import WordList from '../components/WordList'
 
 export default function WordUploadScreen () {
   const [url, setUrl] = React.useState('')
@@ -61,50 +62,7 @@ export default function WordUploadScreen () {
           Pull Data
         </Button>
       </Flex>
-      {list?.length > 0 && (
-        <Stack space='4' direction='row'>
-          <FlatList
-            data={list}
-            keyExtractor={item => item}
-            renderItem={({ item }) => (
-              <Flex
-                flexDirection='row'
-                alignItems='center'
-                flexGrow={1}
-                justifyContent='space-between'
-                marginLeft={2}
-                marginRight={2}
-              >
-                <Badge flexBasis={'30%'} p={2} m={2} colorScheme='coolGray'>
-                  {item}
-                </Badge>
-                <Flex
-                  flexBasis='40%'
-                  flexDirection='row'
-                  justifyContent='space-evenly'
-                >
-                  <Pressable
-                    bgColor='gray.400'
-                    p={2}
-                    rounded='md'
-                    onPress={() => console.log('delete')}
-                  >
-                    <Text>Edit</Text>
-                  </Pressable>
-                  <Pressable
-                    bgColor='red.400'
-                    p={2}
-                    rounded='md'
-                    onPress={() => console.log('delete')}
-                  >
-                    <Text>Delete</Text>
-                  </Pressable>
-                </Flex>
-              </Flex>
-            )}
-          />
-        </Stack>
-      )}
+      {list?.length > 0 && <WordList list={list} />}
     </Center>
   )
 }
