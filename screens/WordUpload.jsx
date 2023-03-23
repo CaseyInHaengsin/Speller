@@ -1,17 +1,5 @@
 import React from 'react'
-import {
-  Text,
-  Center,
-  Input,
-  Flex,
-  FormControl,
-  Button,
-  FlatList,
-  Badge,
-  Stack,
-  Heading,
-  Pressable
-} from 'native-base'
+import { Center, Input, Flex, FormControl, Button, Heading } from 'native-base'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import axios from 'axios'
 import WordList from '../components/WordList'
