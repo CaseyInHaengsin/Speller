@@ -18,7 +18,7 @@ export default function WordUploadScreen () {
   }
 
   return (
-    <Center flex='1' justifyContent='flex-start' p='0'>
+    <Center flex='1' justifyContent='flex-start' p='0' safeArea>
       <Heading>Upload Words</Heading>
       <Flex flexDirection='column' justifyContent='center' m={2}>
         <FormControl my={2}>
